@@ -1,93 +1,60 @@
+# Social Media Admin Dashboard
 
-# 🌟 Admin Dashboard Assignment 🌟
+## Made by Tanishq Minz
 
-Welcome to the **Admin Dashboard Assignment**! This project will guide you in creating a functional and user-friendly admin dashboard for a social media platform using **Next.js** and API integration.
+A modern admin dashboard built with Next.js 13+ (App Router), Chart.js, and Tailwind CSS for managing data of a social media platform.
 
----
+## 🚀 Tech Stack
 
-## 📝 Project Overview
+- **Framework:** Next.js 13+ (App Router)
+- **Styling:** Tailwind CSS
+- **Charts:** Chart.js with react-chartjs-2
+- **Data Fetching:** Native fetch API
+- **Type Safety:** TypeScript
 
-You’ll be building a responsive admin dashboard for a social media application. The dashboard will include essential features such as **user management**, **content moderation**, and **analytics** to give admins control over user data and platform activities.
+## Modified Files
 
-🔗 **Admin Dashboard API**: `https://api.socialverseapp.com/admin/dashboard`
+### `app/layout.tsx`
 
----
+The root layout component that wraps all pages. It includes:
 
-## 🌟 Key Features
+- Common navigation
+- Sidebar
+- Meta tags and global styles
 
-1. 👤 User Management: Easily view & track activity, referrals, and identify active users or creators.
+### `app/page.tsx`
 
-2. 📝 Content Moderation: Monitor daily views, shares, comments, and post exits.
+The main dashboard page component that displays:
 
-3. 📊 Analytics: Visualize user activity and engagement metrics daily/monthly with charts; analyze views, likes, shares, and private messages.
+- User metrics
+- Content metrics
+- Engagement statistics
+- Blockchain data
+- Interactive charts
 
-5. 📈 Data Visualization: Responsive charts (Chart.js/Recharts) provide insights into user engagement and content performance.
+### `app/api/dashboard/route.ts`
 
----
+API route handler that proxies requests to the backend API, avoiding CORS issues.
 
-## 🛠️ Tech Stack
+##  Getting Started
 
-- **Frontend**: Next.js
-- **Styling**: Tailwind CSS or Styled Components
-- **Analytics Visualization**: Chart.js or Recharts
-- **Data Fetching**: SWR or React Query for API requests
+1. Clone the repository
+2. Install dependencies:
 
----
 
-## ✅ Requirements
+```shellscript
+ npm install
+```
 
-1. **📱 Responsive Design**: Ensure that the dashboard is mobile-friendly.
-2. **🌐 API Integration**: Use the provided API to fetch and display user and post data.
-3. **📄 Documentation**: Write clean, well-documented code, and include a detailed **README** with setup instructions and an overview of the project structure.
+3. Create `.env.local` and add your environment variables:
+```shellscript
+ NEXT_PUBLIC_API_URL=https://api.socialverseapp.com/adminNEXT_PUBLIC_API_URL=https://api.socialverseapp.com/admin
+```
 
----
+4. Run the development server:
 
-## 🚀 Getting Started
+```shellscript
+ npm run dev
+```
 
-1. **Clone or Fork the repository** and install the necessary dependencies:
-   ```bash
-   git clone https://github.com/Tim-Alpha/web-assignment.git
-   ```
-   ```bash
-   cd web-assignment
-   ```
-   ```bash
-   npm install
-   ```
-2. **Set up environment variables** by creating an `.env.local` file.
-3. **Run the project**:
-   ```bash
-   npm run dev
-   ```
-
----
-
-## 📩 Submission Process
-
-1. **GitHub Repository**:
-   - Push your code to a GitHub repository with appropriate permissions.
-   - Ensure that the repository has **read permissions** for review.
-
-2. **🎥 Video Explanation**:
-   - Record a video walk through of your project, including:
-     - A demo of the UI and key features
-     - An explanation of your code structure and logic
-     - A brief introduction of yourself and the project
-   - **Tip**: Make it engaging and informative!
-   - Share the video link via a platform like Google Drive or Internshala.
-   - Your face must be visible in the entire video explanation.
-
-3. **Submit the Following**:
-   - **GitHub Link**: Your repository link
-   - **Video Link**: Your video walk through link
-
----
-
-## 🏆 Evaluation Criteria
-
-1. **✨ UI/UX**: Aesthetics, ease of use, and responsiveness
-2. **🧑‍💻 Code Quality**: Readable, well-structured, and documented code
-3. **🌐 API Integration**: Proper use of the provided API
-4. **📅 Completion**: Submission of both the GitHub and video links, with all features implemented
-
-Good luck, and happy coding! 🚀
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
