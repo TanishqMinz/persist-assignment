@@ -39,16 +39,21 @@ API route handler that proxies requests to the backend API, avoiding CORS issues
 ##  Getting Started
 
 1. Clone the repository
-2. Install dependencies:
+
+```
+git clone https://github.com/TanishqMinz/persist-assignment
+```
+
+3. Install dependencies:
 
 
 ```shellscript
- npm install
+ npm install --legacy-peer-deps
 ```
 
 3. Create `.env.local` and add your environment variables:
 ```shellscript
- NEXT_PUBLIC_API_URL=https://api.socialverseapp.com/adminNEXT_PUBLIC_API_URL=https://api.socialverseapp.com/admin
+NEXT_PUBLIC_API_URL=https://api.socialverseapp.com/admin
 ```
 
 4. Run the development server:
