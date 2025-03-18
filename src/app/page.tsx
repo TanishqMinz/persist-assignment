@@ -1,5 +1,6 @@
 'use client'
 
+import { mockDashboardData } from './mockdata.js'
 import { useState, useEffect } from 'react'
 import { Bar, Line } from 'react-chartjs-2'
 import {
@@ -140,27 +141,13 @@ interface DashboardData {
 export default function Dashboard() {
   const [dashboardData, setDashboardData] = useState<DashboardData | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    fetch('/api/dashboard')
-      .then(response => response.json())
-      .then(data => {
-        if (data.status === 'success') {
-          setDashboardData(data.dashboard)
-        } else {
-          setError('Failed to fetch dashboard data')
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching dashboard data:', error)
-        setError('An error occurred while fetching dashboard data')
-      })
-      .finally(() => setIsLoading(false))
+      setDashboardData(mockDashboardData)
+      setIsLoading(false)
   }, [])
 
   if (isLoading) return <div className="text-center p-4">Loading...</div>
-  if (error) return <div className="text-center p-4 text-red-500">{error}</div>
   if (!dashboardData) return <div className="text-center p-4">No data available</div>
 
   const userActivityData = {
